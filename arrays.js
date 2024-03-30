@@ -47,13 +47,17 @@ console.log({numsMultipliedTwo});
 
 // Write a function that takes in an array of numbers and consoles the first four items multiplied by 8 and the last two added by 5. Console the array with the new values
 
-function multiply(arr,n) {
-    var product = 8;
-    n = arr.length;
-    for (var i = 0; 1 < 3; i++) {
-        product *= arr[i];
-    }
-    console.log(product);
+function multiplyAddArray(nums){
+    for(let i = 0; i < 4 && i < nums.length; i++){
+        nums[i] *=8;
 
+    }
+    for(let i = nums.length -2; i < nums.length; i++){
+        if (i >= 0){
+            nums[i] += 5;
+        }  
+    }
+    console.log(nums);
 }
-multiply([1,2,3,4,],4)
+let nums = [11, 20, 22, 25, 30, 31, 34];
+multiplyAddArray(nums);
